@@ -22,4 +22,5 @@ const Results = ({ pets }) => {
     </div>
   );
 };
+
 export default Results;
