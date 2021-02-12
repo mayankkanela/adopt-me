@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import SearchParams from "./SearchParams";
-import { Link, Router } from "@reach/router";
+import { Router, Link } from "@reach/router";
 import Details from "./Details";
+import SearchParams from "./SearchParams";
 import ThemeContext from "./ThemeContext";
-const App = () => {
-  const themeHook = useState("darkblue");
 
+const App = () => {
+  const theme = useState("darkblue");
   return (
-    <ThemeContext.Provider value={themeHook}>
+    <ThemeContext.Provider value={theme}>
       <div>
         <header>
           <Link to="/">Adopt Me!</Link>
@@ -20,4 +20,5 @@ const App = () => {
     </ThemeContext.Provider>
   );
 };
+
 export default App;
